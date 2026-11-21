@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pasar Pagi — game cari perbedaan orisinal: dua gambar nyaris identik, 7 perbedaan, 3 level suasana Indonesia.">
+<link rel="icon" href="data:,">
+<title>Pasar Pagi — Cari Perbedaan</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="hud">
+  <div class="brand">
+    <span class="brand-title">Pasar Pagi</span>
+    <span class="brand-sub">Cari Perbedaan</span>
+  </div>
+  <div class="hud-mid">
+    <span id="level-label" class="level-label">Level 1/3 — Pasar Pagi</span>
+    <span id="level-sub" class="level-sub"></span>
+  </div>
+  <div class="hud-right">
+    <span id="counter" class="counter">Tersisa 7 dari 7</span>
+    <span id="timer" class="timer">02:00</span>
+    <span id="score" class="score">Skor 0</span>
+    <button id="hint-btn" type="button">Hint (H) — 3 tersisa</button>
+    <button id="restart-btn" type="button">Ulang (R)</button>
+    <button id="mute-btn" type="button">Suara: Hidup (M)</button>
+  </div>
+</header>
+<main>
+  <canvas id="game" width="1280" height="656" aria-label="Pasar Pagi: dua gambar nyaris identik berdampingan, klik perbedaannya"></canvas>
+  <p id="message" class="message" role="status">Temukan 7 perbedaan antara gambar A dan B!</p>
+</main>
+<p id="status" class="sr-only" role="status" aria-live="polite"></p>
+<script type="module" src="./src/game.js"></script>
+</body>
+</html>

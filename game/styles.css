@@ -1,0 +1,116 @@
+/* styles.css — tampilan header HUD dan bingkai game "Pasar Pagi". */
+/* Palet hangat pasar pagi: krem, cokelat kayu, oranye matahari terbit. */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f6ead6;
+  color: #3d2b1f;
+  font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+}
+
+.hud {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 20px;
+  background: #8a5a2b;
+  color: #fdf6e3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.brand { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-title { font-size: 26px; font-weight: 800; letter-spacing: 0.5px; }
+.brand-sub { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #f8c471; }
+
+.hud-mid { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.level-label { font-size: 17px; font-weight: 700; white-space: nowrap; }
+.level-sub { font-size: 12px; color: #f0d9b5; white-space: nowrap; }
+
+.hud-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter {
+  font-size: 17px;
+  font-weight: 800;
+  background: #fdf6e3;
+  color: #8a5a2b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  background: #2f6db3;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.timer.danger { background: #c0392b; animation: timer-blink 0.8s steps(2, start) infinite; }
+
+@keyframes timer-blink {
+  50% { opacity: 0.55; }
+}
+
+.score {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hud button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d2b1f;
+  background: #f1c40f;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hud button:hover { background: #f8d24a; }
+.hud button:disabled { background: #b8a88f; color: #6b5a48; cursor: default; }
+
+main { padding: 0; }
+
+#game {
+  display: block;
+  width: 1280px;
+  height: 656px;
+  margin: 0 auto;
+  cursor: crosshair;
+  background: #f6ead6;
+}
+
+.message {
+  margin: 0;
+  padding: 8px 20px 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #5b4636;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
